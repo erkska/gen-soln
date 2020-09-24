@@ -36,5 +36,5 @@ export default {
     createPaymentIntent: "/api/createPaymentIntent",
     recoverPassword: "/api/recoverPassword"
   },
-  googleMapsKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY
+  googleMapsKey: isDevEnv ? process.env.NEXT_PUBLIC_DEV_GOOGLE_MAPS_KEY : process.env.NEXT_PUBLIC_PROD_GOOGLE_MAPS_KEY 
 };
